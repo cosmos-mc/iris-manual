@@ -1,0 +1,255 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.1.4. 이상치형 그래프 &mdash; IRIS Documentation 1.8.0 문서</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/language_data.js"></script>
+        <script src="../../../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="색인" href="../../../../../genindex.html" />
+    <link rel="search" title="검색" href="../../../../../search.html" />
+    <link rel="next" title="3.1.5. 지도형 그래프" href="../05_map/index.html" />
+    <link rel="prev" title="3.1.3. 관계형 그래프" href="../03_relational/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home" alt="Documentation Home"> IRIS Documentation
+          
+
+          
+            
+            <img src="../../../../../_static/iris-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">For Users</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../user_manual/index.html">User Guide/Manual</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">Tutorials Manual</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html#iris-analyzer">IRIS Analyzer</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../01_search/index.html">1. 검색</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../02_pivot/index.html">2. 피벗분석</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">3. 시각화</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../show_charts.html">3.1. 시각화 분석 방법</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../03_save_charts/save_charts.html">3.2. 시각화 이미지 파일 저장</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../04_save_templates/save_templates.html">3.3. 시각화 분석 템플릿 저장</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#iris-studio">IRIS Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#usecase">Usecase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#about-tutorial-versions">About Tutorial Versions</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">For Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../developers_guide/index.html">Developers Guide</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">IRIS Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../../../index.html">Tutorials</a> &raquo;</li>
+        
+          <li><a href="../../index.html"><span class="section-number">3. </span>시각화</a> &raquo;</li>
+        
+          <li><a href="../show_charts.html"><span class="section-number">3.1. </span>시각화 분석 방법</a> &raquo;</li>
+        
+      <li><span class="section-number">3.1.4. </span>이상치형 그래프</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../../_sources/tutorials_manual/IRIS_Analyzer/03_visualization/02_show_charts/04_anomaly/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1><span class="section-number">3.1.4. </span>이상치형 그래프<a class="headerlink" href="#id1" title="제목 주소">¶</a></h1>
+<div class="section" id="id2">
+<h2><span class="section-number">3.1.4.1. </span>이상치 그래프<a class="headerlink" href="#id2" title="제목 주소">¶</a></h2>
+<div class="line-block">
+<div class="line">이상치 그래프에서는 특정 변수에 대한 데이터 분포에서 비정상적으로 벗어난 값을 찾아줍니다.</div>
+<div class="line">히스토그램과 시계열 분포에서는 실 데이터의 분포를 보여주고, 기술통계량과 이상치 탐지를 통해 결측값과 분포에서 크게 벗어난 이상치들을 찾아냅니다.</div>
+</div>
+<img alt="이상치" src="../../../../../_images/show_charts_27.png" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../05_map/index.html" class="btn btn-neutral float-right" title="3.1.5. 지도형 그래프" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../03_relational/index.html" class="btn btn-neutral float-left" title="3.1.3. 관계형 그래프" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 저작권 2020, mobigen
+      <span class="lastupdated">
+        최종 업데이트: 11월 13, 2020 18:03
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

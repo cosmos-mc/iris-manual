@@ -1,0 +1,370 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5.4.3. RESTful API Example &mdash; IRIS Documentation 1.8.0 문서</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../_static//css/qgis_docs.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/language_data.js"></script>
+        <script src="../../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="색인" href="../../../../genindex.html" />
+    <link rel="search" title="검색" href="../../../../search.html" />
+    <link rel="next" title="6. IRIS Map Analyzer" href="../../../MapAnalyzer/index.html" />
+    <link rel="prev" title="5.4.2. Query API" href="restful_api/query.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home" alt="Documentation Home"> IRIS Documentation
+          
+
+          
+            
+            <img src="../../../../_static/iris-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">For Users</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">User Guide/Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction/intro.html">1. Introduction(들어가기)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction/getting_started.html">2. Getting Started (시작하기)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Analyzer/index.html">3. IRIS Analyzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Discovery/index.html">4. IRIS Discovery</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">5. IRIS Discovery Service</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../architecture/index.html">5.1. Architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../command/index.html">5.2. Command References</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../command_develop/index.html">5.3. 명령어 개발 가이드</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">5.4. RESTful API</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="restful_api/auth.html">5.4.1. Auth API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="restful_api/query.html">5.4.2. Query API</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">5.4.3. RESTful API Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../MapAnalyzer/index.html">6. IRIS Map Analyzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Studio/index.html">7. IRIS Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Playground/index.html">8. Playground</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#appendix">Appendix</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">IRIS Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+  
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+    
+      <li><a href="../../../index.html">IRIS User Guide</a> &raquo;</li>
+    
+      <li><a href="../../index.html"><span class="section-number">5. </span>IRIS Discovery Service</a> &raquo;</li>
+    
+      <li><a href="../index.html"><span class="section-number">5.4. </span>RESTful API</a> &raquo;</li>
+    
+    <li><span class="section-number">5.4.3. </span>RESTful API Example</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/mobigen/docs/blob/master/source/user_manual/DiscoveryService/restapi/doc/restapi_example.rst" class="fa fa-github"> Edit</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="restful-api-example">
+<h1><span class="section-number">5.4.3. </span>RESTful API Example<a class="headerlink" href="#restful-api-example" title="제목 주소">¶</a></h1>
+<div class="section" id="id1">
+<h2><span class="section-number">5.4.3.1. </span>개요<a class="headerlink" href="#id1" title="제목 주소">¶</a></h2>
+<ul class="simple">
+<li><p>RESTful API 를 코드를 통해서 간단하게 호출 및 결과 확인을 할 수 있는 과정을 설명 해 놓은 문서</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2><span class="section-number">5.4.3.2. </span>코드 예제<a class="headerlink" href="#id2" title="제목 주소">¶</a></h2>
+<div class="section" id="auth-api-token">
+<h3><span class="section-number">5.4.3.2.1. </span>Auth API 를 통해 Token 발행<a class="headerlink" href="#auth-api-token" title="제목 주소">¶</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#!/usr/bin/env python
+# coding=UTF-8
+import json
+from http.client import HTTPConnection
+import sys
+
+addr = &quot;192.168.100.180&quot;
+port = 6036
+
+q = &quot;model name = &#39;syslog&#39; model_owner = eva start_date = 20191213151300 end_date = 20191213151430&quot;
+size = 10
+
+user_id = &quot;root&quot;
+user_passwd = &#39;&#39; # TODO: 암호 입력 필요
+
+# We are going to shutdown this restful server for each test.
+host, port = (addr, 6036)
+parameters = {}
+parameters[&#39;q&#39;] = q
+parameters[&#39;size&#39;] = size
+parameters[&#39;save&#39;] = True
+
+# get token.
+http_conn = HTTPConnection(host, port)
+
+http_conn.request(
+    &quot;POST&quot;,
+    &quot;/angora/auth&quot;,
+    json.dumps({&quot;id&quot;: user_id, &quot;password&quot;: user_passwd}))
+token = json.load(http_conn.getresponse())[&quot;token&quot;]
+http_conn.close()
+</pre></div>
+</div>
+</div>
+<div class="section" id="query-api-seesion-id">
+<h3><span class="section-number">5.4.3.2.2. </span>Query API 를 통해 seesion id 발행 &amp; 결과 도출<a class="headerlink" href="#query-api-seesion-id" title="제목 주소">¶</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Query / Fetch Session ID
+headers = {}
+headers[&quot;Accept&quot;] = &quot;application/json&quot;
+headers[&quot;Content-Type&quot;] = &quot;application/json&quot;
+headers[&quot;Authorization&quot;] = &quot;Angora %s&quot; % token
+body = json.dumps(parameters)
+
+http_conn = HTTPConnection(host, port)
+
+http_conn.request(&quot;POST&quot;, &quot;/angora/query/jobs&quot;, body=body, headers=headers)
+r = json.load(http_conn.getresponse())
+try :
+    sid = r[&quot;sid&quot;]
+except :
+    print(&quot;Unexpected error:&quot;, sys.exc_info()[0])
+    sys.exit()
+
+http_conn.close()
+
+# Fetch results
+http_conn = HTTPConnection(host, port)
+http_conn.request(
+    &quot;GET&quot;,
+    &quot;/angora/query/jobs/%s&quot; % sid,
+    headers=headers)
+response = json.loads(http_conn.getresponse().read())
+
+#try:
+#    for data in response[&#39;fields&#39;]:
+#        print data
+#except:
+#    pass
+
+for item in response[&#39;results&#39;]:
+    print(str(item))
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="ui">
+<h2><span class="section-number">5.4.3.3. </span>예제 코드 UI를 통해 가져오는 방법<a class="headerlink" href="#ui" title="제목 주소">¶</a></h2>
+<ul class="simple">
+<li><p>IRIS UI 검색 화면에서 Data-Discovery-Service 에 검색 한 내용에 대한 코드를 복사 할 수 있습니다.</p></li>
+<li><p>아래 스크린샷을 참고</p></li>
+</ul>
+<img alt="Open Search window" src="../../../../_images/ex1.PNG" />
+<img alt="Select Datamodel" src="../../../../_images/ex2.PNG" />
+<img alt="Get result of query about selected Datamodel" src="../../../../_images/ex3.PNG" />
+<img alt="Copy source code about query" src="../../../../_images/ex4.PNG" />
+<ul class="simple">
+<li><dl class="simple">
+<dt>복사한 코드 편집기에 붙여넣기</dt><dd><ul>
+<li><p>ex) <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">vi</span> <span class="pre">test.py</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>복사한 코드를 실행하여 결과 확인하기</dt><dd><ul>
+<li><p>ex) <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">python</span> <span class="pre">test.py</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../../MapAnalyzer/index.html" class="btn btn-neutral float-right" title="6. IRIS Map Analyzer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="restful_api/query.html" class="btn btn-neutral float-left" title="5.4.2. Query API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 저작권 2020, mobigen
+      <span class="lastupdated">
+        최종 업데이트: 11월 20, 2020 18:47
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+ 
+
+
+
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+	<!--
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        <span class="fa fa-cog">&nbsp;&nbsp;Options</span>&nbsp;
+        <span class="fa fa-angle-up"></span>
+    </span>
+    <div class="rst-other-versions">
+        <dl>
+            <dt>Contribute</dt>
+            <dd>
+                <a href="https://github.com/mobigen/docs/issues">Report a Problem</a>
+            </dd>
+            
+            <dd>
+                <a href="https://github.com/mobigen/docs/blob/master/source/user_manual/DiscoveryService/restapi/doc/restapi_example.rst"> Edit on GitHub</a>
+            </dd>
+            
+        </dl>
+    </div>
+	-->
+</div>
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

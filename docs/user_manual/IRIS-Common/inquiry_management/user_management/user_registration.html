@@ -1,0 +1,270 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>회원가입 &mdash; IRIS Documentation 1.8.0 문서</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/language_data.js"></script>
+        <script src="../../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="색인" href="../../../../genindex.html" />
+    <link rel="search" title="검색" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home" alt="Documentation Home"> IRIS Documentation
+          
+
+          
+            
+            <img src="../../../../_static/iris-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">For Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">User Guide/Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tutorials_manual/index.html">Tutorials Manual</a></li>
+</ul>
+<p class="caption"><span class="caption-text">For Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developers_guide/index.html">Developers Guide</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">IRIS Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>회원가입</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/user_manual/IRIS-Common/inquiry_management/user_management/user_registration.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id2">
+<h1><span class="target" id="id1">회원가입</span><a class="headerlink" href="#id2" title="제목 주소">¶</a></h1>
+<p>IRIS에 회원가입을 신청한 사용자를 관리하기 위한 기능입니다. 회원가입 허가는 super user(일반적으로 root 계정)만 가능합니다.</p>
+<img alt="SignUp-Page" src="../../../../_images/sign-up-page.png" />
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 23%" />
+<col style="width: 18%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>번호</p></th>
+<th class="head"><p>구분</p></th>
+<th class="head" colspan="2"><p>설명</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>모두 수락</p></td>
+<td colspan="2"><p>가입을 신청한 사용자들을 모두 수락합니다.</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>모두 거절</p></td>
+<td colspan="2"><p>가입을 신청한 사용자들을 모두 거절합니다.</p></td>
+</tr>
+<tr class="row-even"><td rowspan="6"><p>3</p></td>
+<td rowspan="6"><p>회원가입 목록</p></td>
+<td><p>이름</p></td>
+<td><p>회원가입을 신청한 사용자의 이름</p></td>
+</tr>
+<tr class="row-odd"><td><p>전화 번호</p></td>
+<td><p>회원가입을 신청한 사용자의 전화번호</p></td>
+</tr>
+<tr class="row-even"><td><p>이메일</p></td>
+<td><p>회원가입을 신청한 사용자의 이메일</p></td>
+</tr>
+<tr class="row-odd"><td><p>신청 메시지</p></td>
+<td><p>회원가입을 신청한 사용자의 신청 메시지</p></td>
+</tr>
+<tr class="row-even"><td><p>요청일</p></td>
+<td><p>사용자의 회원가입 요청일</p></td>
+</tr>
+<tr class="row-odd"><td><p>작업</p></td>
+<td><p>회원가입을 신청한 사용자에 대한 수락 / 거절</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id4">
+<h2><span class="target" id="id3">회원가입 조회</span><a class="headerlink" href="#id4" title="제목 주소">¶</a></h2>
+<p>현재 회원가입 신청한 사용자들을 조회합니다. 상단의 《새로고침》 버튼을 누르면 목록이 갱신 됩니다.</p>
+<p>또한 회원가입 사용자에 대한 관리에 필요한 편의 기능들을 제공합니다.</p>
+<div class="section" id="option">
+<h3>Option : 필터링<a class="headerlink" href="#option" title="제목 주소">¶</a></h3>
+<p>입력된 텍스트가 포함된 사용자만 목록에 표시됩니다.</p>
+<a class="reference internal image-reference" href="../../../../_images/grid_ctrl_022.png"><img alt="../../../../_images/grid_ctrl_022.png" src="../../../../_images/grid_ctrl_022.png" style="width: 412.2px; height: 64.8px;" /></a>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 저작권 2020, mobigen
+      <span class="lastupdated">
+        최종 업데이트: 11월 13, 2020 18:03
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

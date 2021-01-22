@@ -1,0 +1,425 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>테이블 탐색 &mdash; IRIS Documentation 1.8.0 문서</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="색인" href="../../../genindex.html" />
+    <link rel="search" title="검색" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> IRIS Documentation
+          
+
+          
+            
+            <img src="../../../_static/iris-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">For Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">User Guide/Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials_manual/index.html">Tutorials Manual</a></li>
+</ul>
+<p class="caption"><span class="caption-text">For Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../developers_guide/index.html">Developers Guide</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">IRIS Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>테이블 탐색</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/user_manual/IRIS-WEB/db_browser/table_search.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>테이블 탐색<a class="headerlink" href="#id1" title="제목 주소">¶</a></h1>
+<div class="section" id="id2">
+<h2>데이터베이스 선택<a class="headerlink" href="#id2" title="제목 주소">¶</a></h2>
+<p>IRIS-DB에서는 데이터베이스 기능을 제공합니다. 화면 좌상단의 Combo box를 클릭하면 아래와 같이 선택할 수 있는 데이터베이스 목록이 나타납니다.
+데이터베이스를 선택하면 데이터베이스에 속한 테이블만 목록에 출력되며, SQL을 수행할 때 해당 데이터베이스를 기준으로 실행 합니다.</p>
+<img alt="../../../_images/database2.png" src="../../../_images/database2.png" />
+</div>
+<div class="section" id="id3">
+<h2>테이블 목록<a class="headerlink" href="#id3" title="제목 주소">¶</a></h2>
+<p>테이블 목록 창에서는 IRIS에 만들어진 테이블 목록을 확인할 수 있으며, 테이블 이름 검색, 생성, 수정, 삭제, 상세 정보를 확인할 수 있습니다. IRIS 테이블의 종류는 총 3가지 이며 이중 시스템 테이블은 관리자로 로그인 했을 때만 보여집니다.</p>
+<p>특정 테이블을 선택하면 아래와 같이 해당 테이블의 컬럼 정보를 간략하게 확인할 수 있습니다</p>
+<img alt="../../../_images/table-list2.png" src="../../../_images/table-list2.png" />
+</div>
+<div class="section" id="id4">
+<h2>테이블 생성<a class="headerlink" href="#id4" title="제목 주소">¶</a></h2>
+<p>사용자는 글로벌 테이블과 로컬 테이블을 생성할 수 있습니다.</p>
+<div class="section" id="id5">
+<h3>글로벌 테이블<a class="headerlink" href="#id5" title="제목 주소">¶</a></h3>
+<p>IRIS에서 글로벌 테이블은 작고 변동이 적은 데이터를 저장하는 용도로 사용하는 테이블입니다.</p>
+<img alt="../../../_images/create_table_global.png" src="../../../_images/create_table_global.png" />
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 15%" />
+<col style="width: 81%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>번호</p></td>
+<td><p>구분</p></td>
+<td><p>설명</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>테이블 명 입력란</p></td>
+<td><p>테이블 명 입력</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>테이블 타입 설정</p></td>
+<td><p>테이블 타입 선택할 수 있는 라디오 버튼</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>컬럼 추가</p></td>
+<td><p>원하는 수 만큼 컬럼을 추가할 수 있는 버튼</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>컬럼 명 및 데이터 타입</p></td>
+<td><p>컬럼명 입력과 데이터 타입을 선택할 수 있는 셀렉트 박스</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>프라이버리 키 설정</p></td>
+<td><p>해당 컬럼을 프라이머리 키 컬럼으로 설정할 수 있는 체크 박스</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>자동 증가 설정</p></td>
+<td><p>해당 컬럼은 Auto Increment 컬럼으로 설정할 수 있는 버튼</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>컬럼 삭제</p></td>
+<td><p>컬럼을 삭제할 수 있는 버튼</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>테이블 생성</p></td>
+<td><p>글로벌 테이블을 생성할 수 있는 버튼</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id6">
+<h3>로컬 테이블<a class="headerlink" href="#id6" title="제목 주소">¶</a></h3>
+<p>IRIS에서 로컬 테이블은 시간에 따른 매우 많은 양의 데이터를 저장하는 용도로 사용하는 테이블입니다.
+로컬 테이블에 대용량 데이터를 저장할 때는 내부적으로 파티션 작업을 진행하여 저장합니다. 파티션 작업을 진행하기 위해서는 파티션 키, 파티션 구분일을 각각 유효한 컬럼에 설정해야 합니다.</p>
+<ul class="simple">
+<li><p>파티션 키: null이 아니고, <code class="docutils literal notranslate"><span class="pre">[A-Za-z0-9_-]</span></code> 와 같은 값 컬럼</p></li>
+<li><p>파티션 구분일: YYYYMMDDHHmmss 형태의 14자리 날짜 값 컬럼</p></li>
+</ul>
+<p>파티션 구분일로 지정한 컬럼의 값을 기준으로, 일정한 시간 간격에 따라 폴더를 생성해 파일로 저장합니다. 또한 데이터를 1차적으로 램디스크에 저장하며, 일정 시간이 지난 후에는 디스크로 옮겨지게 됩니다. 그리고 시간이 더 많이 지나면 디스크에서 자동으로 삭제가 됩니다. 로컬 테이블의 경우 이러한 시간 설정을 추가로 해주어야 합니다.</p>
+<ul class="simple">
+<li><p>메모리 저장시간: 램디스크에 저장하는 시간, 단위는 분(minutes)</p></li>
+<li><p>디스크 저장시간: 디스크에 저장하는 시간, 단위는 분(minutes)</p></li>
+<li><p>파티션 범위: 하나의 파티션이 가지는 범위, 단위는 분(minutes)</p></li>
+</ul>
+<p>파티션 범위 설정은 데이터 INSERT / SELECT의 성능에 영향을 주므로 용도에 맞게 시간을 잘 설정해줘야 합니다.</p>
+<img alt="../../../_images/create_table_local.png" src="../../../_images/create_table_local.png" />
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 15%" />
+<col style="width: 81%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>번호</p></td>
+<td><p>구분</p></td>
+<td><p>설명</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>테이블 명 입력란</p></td>
+<td><p>테이블 명 입력</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>테이블 타입 설정</p></td>
+<td><p>테이블 타입을 선택하는 라디오 버튼</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>컬럼 추가 버튼</p></td>
+<td><p>컬럼을 추가하는 버튼</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>컬럼 명 및 데이터 타입</p></td>
+<td><p>컬럼 명 입력과 데이터 타입을 선택하는 콤보 박스</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>파티션 키 설정</p></td>
+<td><p>해당 컬럼을 프라이머리 키 컬럼으로 설정하는 체크 박스</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>파티션 키 설정</p></td>
+<td><p>해당 컬럼을 Auto Increment 컬럼으로 설정하는 버튼</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>컬럼 삭제 버튼</p></td>
+<td><p>컬럼을 삭제하는 버튼</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>메모리 저장 시간 설정</p></td>
+<td><p>램디스크에 보관할 시간, 분 단위로 입력, 기본값: 60분</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>디스크 저장 시간 설정</p></td>
+<td><p>디스크에 보관할 시간, 분 단위로 입력, 기본값: 43,200분 (30일)</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>파티션 범위 설정</p></td>
+<td><p>파티션 범위를 결정하는 시간, 분 단위로 입력, 기본값: 10분</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>설명 툴팁</p></td>
+<td><p>각 항목의 간략한 설명을 확인하는 툴팁</p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>테이블 생성</p></td>
+<td><p>로컬 테이블을 생성하는 버튼</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>팝업 메뉴<a class="headerlink" href="#id7" title="제목 주소">¶</a></h2>
+<p>테이블 목록에서 특정 테이블을 대상으로 마우스 우클릭을 하면 팝업 메뉴가 나타납니다. 이 팝업 메뉴에서는 테이블 상세 정보 조회 및 테이블 수정/삭제, SQL 문 자동 생성 등의 기능을 선택할 수 있습니다.</p>
+<img alt="../../../_images/detail-table1.png" src="../../../_images/detail-table1.png" />
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 15%" />
+<col style="width: 81%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>번호</p></td>
+<td><p>구분</p></td>
+<td><p>설명</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>테이블 상세</p></td>
+<td><p>테이블 상세 정보 다이얼로그 오픈</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>테이블 수정</p></td>
+<td><p>테이블 수정 쿼리를 입력 창에 자동으로 생성 (현재 버전에서 불가능)</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>Drop 쿼리 생성</p></td>
+<td><p>테이블 삭제 쿼리를 입력 창에 자동으로 생성</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>Select 쿼리 생성</p></td>
+<td><p>테이블 컬럼 수 만큼 Select 쿼리를 입력 창에 자동으로 생성</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>Insert 쿼리 생성</p></td>
+<td><p>테이블 컬럼 수 만큼 Insert 쿼리를 입력 창에 자동으로 생성</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>Update 쿼리 생성</p></td>
+<td><p>테이블 컬럼 수 만큼 Update 쿼리를 입력 창에 자동으로 생성</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>Delete 쿼리 생성</p></td>
+<td><p>테이블 컬럼 수 만큼 Delete 쿼리를 입력 창에 자동으로 생성</p></td>
+</tr>
+</tbody>
+</table>
+<p>쿼리 자동 생성은 아래와 같이 SQL 입력창에 입력됩니다.</p>
+<img alt="../../../_images/auto-query1.png" src="../../../_images/auto-query1.png" />
+</div>
+<div class="section" id="id8">
+<h2>테이블 상세<a class="headerlink" href="#id8" title="제목 주소">¶</a></h2>
+<p>팝업 메뉴를 통해 열 수 있는 테이블 상세 정보 다이얼로그에서는 선택한 테이블의 컬럼 정보, 생성 옵션, 스키마, 샘플 데이터 등을 확인할 수 있습니다.</p>
+<div class="section" id="id9">
+<h3>컬럼 정보<a class="headerlink" href="#id9" title="제목 주소">¶</a></h3>
+<p>선택한 테이블의 컬럼 정보를 확인할 수 있으며, 아래 데이터 부분에서 샘플 데이터를 확인할 수 있습니다.</p>
+<img alt="../../../_images/detail-table2.png" src="../../../_images/detail-table2.png" />
+</div>
+<div class="section" id="id10">
+<h3>테이블 생성 옵션<a class="headerlink" href="#id10" title="제목 주소">¶</a></h3>
+<p>테이블을 생성할 때 설정한 옵션 값들을 확인할 수 있습니다.</p>
+<img alt="../../../_images/detail-table3.png" src="../../../_images/detail-table3.png" />
+</div>
+<div class="section" id="id11">
+<h3>스크립트<a class="headerlink" href="#id11" title="제목 주소">¶</a></h3>
+<p>테이블 생성할 때 사용한 SQL을 확인할 수 있습니다.</p>
+<img alt="../../../_images/detail-table4.png" src="../../../_images/detail-table4.png" />
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 저작권 2020, mobigen
+      <span class="lastupdated">
+        최종 업데이트: 11월 13, 2020 18:03
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
