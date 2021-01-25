@@ -1,0 +1,367 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ko" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ko" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.6. 분석 템플릿 &mdash; IRIS Documentation 1.8.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static//css/qgis_docs.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="색인" href="../../../genindex.html" />
+    <link rel="search" title="검색" href="../../../search.html" />
+    <link rel="next" title="3.7. 데이터 모델" href="../data_model/00_data_model.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="index.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> IRIS Documentation
+          
+
+          
+            
+            <img src="../../../_static/iris-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">For Users</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">User Guide/Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/intro.html">1. Introduction(들어가기)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/getting_started.html">2. Getting Started (시작하기)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">3. IRIS Analyzer</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../common/index.html">3.1. 분석 공통 동작</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../search/search.html">3.2. 검색</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pivot/pivot.html">3.3. 피벗분석</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualization/visualization.html">3.4. 시각화</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ad/ad.html">3.5. 이상탐지</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3.6. 분석 템플릿</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">3.6.1. 시각화 조회</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">3.6.2. 시각화 접근 권한 설정</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../data_model/00_data_model.html">3.7. 데이터 모델</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discovery/index.html">4. IRIS Discovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../DiscoveryService/index.html">5. IRIS Discovery Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../MapAnalyzer/index.html">6. IRIS Map Analyzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Studio/index.html">7. IRIS Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Playground/index.html">8. Playground</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#appendix">Appendix</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">IRIS Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+  
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+    
+      <li><a href="../../index.html">IRIS User Guide</a> &raquo;</li>
+    
+      <li><a href="../index.html">3. IRIS Analyzer</a> &raquo;</li>
+    
+      <li><a href="index.html">&lt;no title&gt;</a> &raquo;</li>
+    
+    <li>3.6. 분석 템플릿</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/mobigen/docs/blob/master/source/user_manual/Analyzer/template/template.rst" class="fa fa-github"> Edit</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>3.6. 분석 템플릿<a class="headerlink" href="#id1" title="제목 주소">¶</a></h1>
+<p>시각화는 분석 화면에서 검색 조건과 여러가지 설정 정보를 담고 있는 일종의 템플릿입니다. 시각화 관리 화면에서는 각 화면에서 사용자가 작성하여 저장한 시각화 객체들을 수정하거나 삭제할 수 있습니다. 또한 특정 시각화를 다른 사용자가 접근할 수 있도록 권한을 부여할 수도 있습니다.</p>
+<img alt="../../../_images/visual_main.png" src="../../../_images/visual_main.png" />
+<table border="1" class="docutils">
+<colgroup>
+<col width="5%" />
+<col width="23%" />
+<col width="12%" />
+<col width="59%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">번호</th>
+<th class="head">구분</th>
+<th class="head" colspan="2">설명</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>새로고침 버튼</td>
+<td colspan="2">시각화 목록을 다시 불러와 갱신합니다.</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>목록 설정</td>
+<td colspan="2">그리드에 표시되는 항목들을 필터링하거나 선택할 수 있습니다.</td>
+</tr>
+<tr class="row-even"><td rowspan="7">3</td>
+<td rowspan="7">시각화 목록</td>
+<td>이름</td>
+<td>시각화의 이름</td>
+</tr>
+<tr class="row-odd"><td>소유자</td>
+<td>시각화 내용을 작성/저장한 사용자</td>
+</tr>
+<tr class="row-even"><td>작업</td>
+<td>시각화 편집/복사/삭제 기능</td>
+</tr>
+<tr class="row-odd"><td>생성일</td>
+<td>시각화 생성일시</td>
+</tr>
+<tr class="row-even"><td>구분</td>
+<td>시각화 유형 혹은 시각화를 저장한 분석 화면 이름</td>
+</tr>
+<tr class="row-odd"><td>데이터 모델</td>
+<td>시각화의 데이터 모델 정보</td>
+</tr>
+<tr class="row-even"><td>접근 권한</td>
+<td>접근 권한 설정 기능</td>
+</tr>
+</tbody>
+</table>
+<p>상기 화면에서는 저장되어 있는 시각화 항목들을 확인할 수 있으며, 원하는 시각화를 빠르게 찾기 위한 목록 개수, 필터링 기능을 제공합니다. 특정 시각화를 펼치면 상세한 정보를 볼 수 있습니다. 또한, 원하는 시각화를 편집/복사/삭제를 할 수 있습니다.</p>
+<div class="section" id="id3">
+<h2>3.6.1. <span class="target" id="id2">시각화 조회</span><a class="headerlink" href="#id3" title="제목 주소">¶</a></h2>
+<p>사용자는 현재 저장되어 있는 시각화 항목들을 손쉽게 확인 할 수 있으며, 시각화 객체 관리에 필요한 편의 기능들을 제공합니다.</p>
+<div class="section" id="option-1">
+<h3>3.6.1.1. Option 1: 목록 개수<a class="headerlink" href="#option-1" title="제목 주소">¶</a></h3>
+<p>한 페이지에 표시되는 목록의 개수를 지정합니다.</p>
+<img alt="../../../_images/grid_ctrl_011.png" src="../../../_images/grid_ctrl_011.png" />
+</div>
+<div class="section" id="option-2">
+<h3>3.6.1.2. Option 2: 필터링<a class="headerlink" href="#option-2" title="제목 주소">¶</a></h3>
+<p>입력된 텍스트가 포함된 계정만 목록에 표시됩니다.</p>
+<img alt="../../../_images/grid_ctrl_021.png" src="../../../_images/grid_ctrl_021.png" />
+</div>
+<div class="section" id="option-3">
+<h3>3.6.1.3. Option 3: 페이징<a class="headerlink" href="#option-3" title="제목 주소">¶</a></h3>
+<p>원하는 목록의 페이지로 이동합니다.</p>
+<img alt="../../../_images/grid_ctrl_031.png" src="../../../_images/grid_ctrl_031.png" />
+</div>
+<div class="section" id="option-4">
+<h3>3.6.1.4. Option 4: 상세보기<a class="headerlink" href="#option-4" title="제목 주소">¶</a></h3>
+<p>목록에서 모델명 좌측에 ▶ 아이콘을 클릭하면 데이터 모델의 상세정보를 표시합니다. 다시 ▼ 를 클릭하면 상세정보를 닫습니다.</p>
+</div>
+<div class="section" id="option-5">
+<h3>3.6.1.5. Option 5: 작업<a class="headerlink" href="#option-5" title="제목 주소">¶</a></h3>
+<p>특정 시각화를 편집, 복사 하거나 삭제할 수 있습니다. 이름을 변경하거나, 시각화를 저장한 화면으로 이동하여 편집을 수행할 수 있고 URL 복사 기능으로 해당 시각화를 빠르게 접근할 수 있는 URL을 얻을 수도 있습니다.</p>
+<img alt="../../../_images/visual_grid_menu.png" src="../../../_images/visual_grid_menu.png" />
+</div>
+</div>
+<div class="section" id="id5">
+<h2>3.6.2. <span class="target" id="id4">시각화 접근 권한 설정</span><a class="headerlink" href="#id5" title="제목 주소">¶</a></h2>
+<p>특정 시각화를 다른 사용자가 접근할 수 있도록 사용자나 그룹 단위로 접근 권한을 설정할 수 있습니다.</p>
+<img alt="../../../_images/visual_set_access_dlg.png" src="../../../_images/visual_set_access_dlg.png" />
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="15%" />
+<col width="81%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>번호</td>
+<td>구분</td>
+<td>설명</td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>사용자/그룹 탭</td>
+<td>사용자 혹은 그룹을 전환하기 위한 탭</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>모든 사용자 체크박스</td>
+<td>모든 사용자에게 공유하고자 할 때 체크하는 설정</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>현재 권한 목록</td>
+<td>현재 접근 권한을 가진 사용자 혹은 4)사용자 목록에서 추가한 권한을 부여하고자 하는 사용자 목록</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>사용자 목록</td>
+<td>모든 사용자 목록. 《추가》 버튼을 클릭하면 3)현재 권한 목록에 추가됩니다.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../data_model/00_data_model.html" class="btn btn-neutral float-right" title="3.7. 데이터 모델" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, mobigen
+      최종 업데이트: 1월 25, 2021 15:29
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+ 
+
+
+
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+	<!--
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        <span class="fa fa-cog">&nbsp;&nbsp;Options</span>&nbsp;
+        <span class="fa fa-angle-up"></span>
+    </span>
+    <div class="rst-other-versions">
+        <dl>
+            <dt>Contribute</dt>
+            <dd>
+                <a href="https://github.com/mobigen/docs/issues">Report a Problem</a>
+            </dd>
+            
+            <dd>
+                <a href="https://github.com/mobigen/docs/blob/master/source/user_manual/Analyzer/template/template.rst"> Edit on GitHub</a>
+            </dd>
+            
+        </dl>
+    </div>
+	-->
+</div>
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/translations.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
